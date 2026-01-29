@@ -1,3 +1,4 @@
+import 'package:fit_kit/screens/details_screen.dart';
 import 'package:flutter/material.dart';
 import '../widget/plan_card.dart';
 import '../widget/work_card.dart';
@@ -16,22 +17,32 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
         backgroundColor: Colors.white,
 
-        appBar: AppBar(
-          backgroundColor: Colors.red,
-          centerTitle: true,
-          leading:  Icon(Icons.menu, color: Colors.white),
-          title:  Text(
-            'Home',
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          actions:  [
-            Icon(Icons.search, color: Colors.white),
-            SizedBox(width: 10),
-          ],
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+        centerTitle: true,
+        leading: IconButton(
+          icon: const Icon(Icons.menu, color: Colors.white),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const DetailsScreen(), // استبدل DetailsScreen باسم صفحتك الجديدة
+              ),
+            );
+          },
         ),
+        title: const Text(
+          'Home',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        actions: const [
+          Icon(Icons.search, color: Colors.white),
+          SizedBox(width: 10),
+        ],
+      ),
 
         body: SingleChildScrollView(
           padding:  EdgeInsets.all(20),
@@ -82,7 +93,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
               GridView.count(
                 shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
                 crossAxisCount: 2,
                 crossAxisSpacing: 15,
                 mainAxisSpacing: 15,
@@ -100,7 +110,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0,
-        type: BottomNavigationBarType.fixed,
         selectedItemColor: const Color(0xFFC62828),
         unselectedItemColor: Colors.grey,
         onTap: (index) {
@@ -112,7 +121,7 @@ class _HomeScreenState extends State<HomeScreen> {
           }
         },
         items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
+        BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: ''),
         BottomNavigationBarItem(icon: Icon(Icons.notifications_none), label: ''),
         BottomNavigationBarItem(icon: Icon(Icons.person_outline), label: ''),
         BottomNavigationBarItem(icon: Icon(Icons.chat_bubble_outline), label:''),
