@@ -21,7 +21,7 @@ samples, guidance on mobile development, and a full API reference.
 <img width="248" height="535" alt="intented scr" src="https://github.com/user-attachments/assets/b1cfa160-b659-4b83-9c9f-519a1e060a19" />
 
 
-<img width="241" height="524" alt="home scr" src="https://github.com/user-attachments/assets/f381133f-bd08-4cb3-ad35-473522cfd240" />
+<img width="238" height="526" alt="home scr" src="https://github.com/user-attachments/assets/b6a9aa2b-41aa-4d8d-9eb5-8332e216557c" />
 
 
 <img width="248" height="529" alt="not scr" src="https://github.com/user-attachments/assets/99e85372-a903-4e8b-a785-d824f9841870" />
